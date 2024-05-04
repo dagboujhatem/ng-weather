@@ -1,0 +1,14 @@
+<div class="well">
+    <h2>Enter a cache duration (seconds):</h2>
+    <input type="number" min="1" #cacheDuration placeholder="Cahce duration (seconds)" class="form-control"
+        [value]="httpCacheService.cacheDuration()">
+    <br>
+    <div class="flex">
+        <button class="btn btn-success" [routerLink]="'/'">
+            < Back to main page 
+        </button>
+        <button class="btn btn-primary mx-2" (click)="saveCacheDuration(cacheDuration.value)">
+            Save
+        </button>
+    </div>
+</div>
